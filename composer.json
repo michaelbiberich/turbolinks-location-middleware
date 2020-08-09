@@ -1,0 +1,48 @@
+{
+    "name": "michaelbiberich/turbolinks-location-middleware",
+    "description": "PSR-15 compliant implementation of MiddlewareInterface to insert Turbolinks-Location header into every response",
+    "keywords": [
+        "turbolinks",
+        "turbolinks-location",
+        "middleware",
+        "psr-15"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Michael Biberich",
+            "email": "michael@biberich.at"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "psr/http-server-middleware": "^1"
+    },
+    "require-dev": {
+        "pds/skeleton": "^1",
+        "phpunit/phpunit": "^9.3",
+        "nyholm/psr7": "^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichaelBiberich\\TurbolinksLocationMiddleware\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MichaelBiberich\\TurbolinksLocationMiddleware\\Tests\\": "tests/"
+        }
+    },
+    "provide": {
+        "psr/http-server-middleware-implementation": "^1"
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit --configuration ./phpunit.xml.dist",
+        "coverage": "phpdbg -qrr ./vendor/bin/phpunit --coverage-text"
+    },
+    "scripts-descriptions": {
+        "test": "Run all test suites defined in phpunit.xml.dist with PHPUnit",
+        "coverage": "Run all test suites defined in phpunit.xml.dist with PHPUnit and run Code Coverage Analysis with PHPDBG"
+    }
+}
